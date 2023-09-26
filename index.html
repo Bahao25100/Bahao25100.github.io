@@ -1,79 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #2B0DDB;
-  margin: 0;
-  padding: 0;
-}
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-h1 {
-  font-size: 33px;
-  margin-bottom: 10px;
-}
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-.social-links {
-  margin-top: 20px;
-}
-.social-links a {
-  display: inline-block;
-  margin-right: 10px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  line-height: 30px;
-  text-decoration: none;
-}
-.social-links a:hover {
-  opacity: 0.7;
-}
-</style>
+    <title>Số requests đã truy cập</title>
 </head>
 <body>
-<div class="container">
-  <img src="https://imgbb.com/"><img src="https://i.ibb.co/G3Mc02W/isometric-file-script-code-with-php-sign-vector-744112-549.jpg" alt="Profile Image" class="profile-image">
-  <h1>Encode Php</h1>
-  <h2>Usage Encoding 6.3</h2>
-  <p>Thông tin: 
-<br>chức năng: mã hoá bảo vệ mã nguồn php
-<br>số lớp bảo vệ: 2 
-<br>error: lỗi kí tự chữ có dấu khi mã hoá ( hiện tại đã sửa 80% )
-<br>chống giải mã: 75% ( đã biến tấu lại tất cả )
-<br>hiện tại mọi người sử dụng bản 6.3 nhé bản 6.4 sẽ có nhiều chức năng mới và dạng mới dự định vào tháng 11-12 sẽ có
-<br>tôi sẽ gửi cho bạn 1 project hay con gọi là thư mục bạn sẽ chạy nó trên ứng dụng termux và dòng lệnh bạn cần chạy như sau:
-<br>
-cd /sdcard/download/haoyeutvan và php enc.php source.php target.php 
-nó sẽ bắt bạn nhập key lúc này bạn chỉ cần mở file key.txt đã chuẩn bị sẵn trước đó trong thư mục và lấy key dán vào và sau đó nó sẽ xoá tất cả dữ liệu trên màn hình và sẽ hiện các dữ liệu mã hoá thành công. Chúc bạn thành công.</p>
-  <p>Hãy liên hệ với tôi để bắt đầu sử dụng thử nó hoặc để biết thêm thông tin về tôi:</p>
-  <div class="social-links">
-    <a href="https://www.facebook.com/profile.php?id=100043813119359&mibextid=ZbWKwL" target="_blank">F</a>
-    <a href="https://youtube.com/@bahaopython?si=36HbwdrxQ-25gYyw" target="_blank">Y</a>
-    <a href="zalo.me/nguyenphamangbahao25" target="_blank">Z</a>
-    <a href="https://github.com" target="_blank">G</a>
-  </div>
-</div>
+    <h1>Số requests đã truy cập</h1>
+    <p id="requestCount">Đang tải...</p>
+
+    <script>
+        // Sử dụng JavaScript để lấy số requests đã truy cập
+        var requestCount = performance.getEntriesByType('resource').length;
+
+        // Hiển thị số requests đã truy cập trong thẻ p có id "requestCount"
+        document.getElementById("requestCount").innerHTML = requestCount;
+    </script>
 </body>
-</html>
+</html
